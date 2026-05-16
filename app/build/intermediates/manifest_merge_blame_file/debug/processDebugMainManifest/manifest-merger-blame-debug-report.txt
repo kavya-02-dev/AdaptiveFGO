@@ -1,0 +1,282 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.adaptivefgo.navigator"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- Location Permissions -->
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:5:5-79
+12-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:5:22-76
+13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+13-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:6:5-81
+13-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:6:22-78
+14    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+14-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:7:5-85
+14-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:7:22-82
+15    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+15-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:8:5-79
+15-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:8:22-76
+16
+17    <!-- Sensor Permissions -->
+18    <uses-permission android:name="android.permission.BODY_SENSORS" />
+18-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:11:5-71
+18-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:11:22-68
+19    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
+19-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:12:5-85
+19-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:12:22-82
+20
+21    <!-- Network -->
+22    <uses-permission android:name="android.permission.INTERNET" />
+22-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:15:5-67
+22-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:15:22-64
+23    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+23-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:16:5-79
+23-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:16:22-76
+24
+25    <!-- Foreground Service -->
+26    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+26-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:19:5-77
+26-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:19:22-74
+27    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+27-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:20:5-86
+27-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:20:22-83
+28    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+28-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:21:5-77
+28-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:21:22-74
+29
+30    <!-- Wake Lock -->
+31    <uses-permission android:name="android.permission.WAKE_LOCK" />
+31-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:24:5-68
+31-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:24:22-65
+32
+33    <!-- Hardware Features -->
+34    <uses-feature
+34-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:27:5-98
+35        android:name="android.hardware.sensor.accelerometer"
+35-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:27:19-71
+36        android:required="true" />
+36-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:27:72-95
+37    <uses-feature
+37-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:28:5-94
+38        android:name="android.hardware.sensor.gyroscope"
+38-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:28:19-67
+39        android:required="true" />
+39-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:28:68-91
+40    <uses-feature
+40-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:29:5-90
+41        android:name="android.hardware.location.gps"
+41-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:29:19-63
+42        android:required="true" />
+42-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:29:64-87
+43    <uses-feature
+43-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\91877\.gradle\caches\8.10\transforms\7fca41445d03cae5f090d9cbed2aefe0\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:26:5-28:35
+44        android:glEsVersion="0x00020000"
+44-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\91877\.gradle\caches\8.10\transforms\7fca41445d03cae5f090d9cbed2aefe0\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:27:9-41
+45        android:required="true" />
+45-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\91877\.gradle\caches\8.10\transforms\7fca41445d03cae5f090d9cbed2aefe0\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:28:9-32
+46
+47    <queries>
+47-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\91877\.gradle\caches\8.10\transforms\7fca41445d03cae5f090d9cbed2aefe0\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:30:5-34:15
+48
+49        <!-- Needs to be explicitly declared on Android R+ -->
+50        <package android:name="com.google.android.apps.maps" />
+50-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\91877\.gradle\caches\8.10\transforms\7fca41445d03cae5f090d9cbed2aefe0\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:33:9-64
+50-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\91877\.gradle\caches\8.10\transforms\7fca41445d03cae5f090d9cbed2aefe0\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:33:18-61
+51    </queries>
+52
+53    <permission
+53-->[androidx.core:core:1.12.0] C:\Users\91877\.gradle\caches\8.10\transforms\19df3aba6c727a10a111b25680826b67\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+54        android:name="com.adaptivefgo.navigator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+54-->[androidx.core:core:1.12.0] C:\Users\91877\.gradle\caches\8.10\transforms\19df3aba6c727a10a111b25680826b67\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+55        android:protectionLevel="signature" />
+55-->[androidx.core:core:1.12.0] C:\Users\91877\.gradle\caches\8.10\transforms\19df3aba6c727a10a111b25680826b67\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+56
+57    <uses-permission android:name="com.adaptivefgo.navigator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+57-->[androidx.core:core:1.12.0] C:\Users\91877\.gradle\caches\8.10\transforms\19df3aba6c727a10a111b25680826b67\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+57-->[androidx.core:core:1.12.0] C:\Users\91877\.gradle\caches\8.10\transforms\19df3aba6c727a10a111b25680826b67\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+58
+59    <application
+59-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:31:5-67:19
+60        android:allowBackup="true"
+60-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:32:9-35
+61        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+61-->[androidx.core:core:1.12.0] C:\Users\91877\.gradle\caches\8.10\transforms\19df3aba6c727a10a111b25680826b67\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+62        android:debuggable="true"
+63        android:extractNativeLibs="false"
+64        android:icon="@mipmap/ic_launcher"
+64-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:33:9-43
+65        android:label="@string/app_name"
+65-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:34:9-41
+66        android:roundIcon="@mipmap/ic_launcher_round"
+66-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:35:9-54
+67        android:supportsRtl="true"
+67-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:36:9-35
+68        android:testOnly="true"
+69        android:theme="@style/Theme.AdaptiveFGO"
+69-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:37:9-49
+70        android:usesCleartextTraffic="false" >
+70-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:38:9-45
+71
+72        <!-- Google Maps API Key -->
+73        <meta-data
+74            android:name="com.google.android.geo.API_KEY"
+74-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:42:13-58
+75            android:value="AIzaSyC6SC0Dg1wdPMiXBufMHJi_Qg6C03SClUs" />
+75-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:43:13-44
+76
+77        <!-- Main Activity -->
+78        <activity
+78-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:46:9-54:20
+79            android:name="com.adaptivefgo.navigator.MainActivity"
+79-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:47:13-41
+80            android:exported="true"
+80-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:48:13-36
+81            android:windowSoftInputMode="adjustResize" >
+81-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:49:13-55
+82            <intent-filter>
+82-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:50:13-53:29
+83                <action android:name="android.intent.action.MAIN" />
+83-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:51:17-69
+83-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:51:25-66
+84
+85                <category android:name="android.intent.category.LAUNCHER" />
+85-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:52:17-77
+85-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:52:27-74
+86            </intent-filter>
+87        </activity>
+88
+89        <!-- Permissions Activity -->
+90        <activity
+90-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:57:9-59:40
+91            android:name="com.adaptivefgo.navigator.PermissionsActivity"
+91-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:58:13-48
+92            android:exported="false" />
+92-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:59:13-37
+93
+94        <!-- Background Localization Service -->
+95        <service
+95-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:62:9-65:56
+96            android:name="com.adaptivefgo.navigator.service.LocalizationService"
+96-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:63:13-56
+97            android:exported="false"
+97-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:64:13-37
+98            android:foregroundServiceType="location" />
+98-->C:\Users\91877\Downloads\AdaptiveFGO_Navigator\AdaptiveFGO\app\src\main\AndroidManifest.xml:65:13-53
+99
+100        <provider
+100-->[androidx.emoji2:emoji2:1.2.0] C:\Users\91877\.gradle\caches\8.10\transforms\9ac725f81af15822b21963033448b8d8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+101            android:name="androidx.startup.InitializationProvider"
+101-->[androidx.emoji2:emoji2:1.2.0] C:\Users\91877\.gradle\caches\8.10\transforms\9ac725f81af15822b21963033448b8d8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+102            android:authorities="com.adaptivefgo.navigator.androidx-startup"
+102-->[androidx.emoji2:emoji2:1.2.0] C:\Users\91877\.gradle\caches\8.10\transforms\9ac725f81af15822b21963033448b8d8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+103            android:exported="false" >
+103-->[androidx.emoji2:emoji2:1.2.0] C:\Users\91877\.gradle\caches\8.10\transforms\9ac725f81af15822b21963033448b8d8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+104            <meta-data
+104-->[androidx.emoji2:emoji2:1.2.0] C:\Users\91877\.gradle\caches\8.10\transforms\9ac725f81af15822b21963033448b8d8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+105                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+105-->[androidx.emoji2:emoji2:1.2.0] C:\Users\91877\.gradle\caches\8.10\transforms\9ac725f81af15822b21963033448b8d8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+106                android:value="androidx.startup" />
+106-->[androidx.emoji2:emoji2:1.2.0] C:\Users\91877\.gradle\caches\8.10\transforms\9ac725f81af15822b21963033448b8d8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+107            <meta-data
+107-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\91877\.gradle\caches\8.10\transforms\8e6dac6b141489a3a06851bfad8415b8\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+108                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+108-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\91877\.gradle\caches\8.10\transforms\8e6dac6b141489a3a06851bfad8415b8\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+109                android:value="androidx.startup" />
+109-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\91877\.gradle\caches\8.10\transforms\8e6dac6b141489a3a06851bfad8415b8\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+110            <meta-data
+110-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+111                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+111-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+112                android:value="androidx.startup" />
+112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+113        </provider> <!-- Needs to be explicitly declared on P+ -->
+114        <uses-library
+114-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\91877\.gradle\caches\8.10\transforms\7fca41445d03cae5f090d9cbed2aefe0\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:39:9-41:40
+115            android:name="org.apache.http.legacy"
+115-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\91877\.gradle\caches\8.10\transforms\7fca41445d03cae5f090d9cbed2aefe0\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:40:13-50
+116            android:required="false" />
+116-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\91877\.gradle\caches\8.10\transforms\7fca41445d03cae5f090d9cbed2aefe0\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:41:13-37
+117
+118        <activity
+118-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\91877\.gradle\caches\8.10\transforms\0e6f5acb226a9054066d23cc061d9fe8\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+119            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+119-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\91877\.gradle\caches\8.10\transforms\0e6f5acb226a9054066d23cc061d9fe8\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+120            android:exported="false"
+120-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\91877\.gradle\caches\8.10\transforms\0e6f5acb226a9054066d23cc061d9fe8\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+121            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+121-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\91877\.gradle\caches\8.10\transforms\0e6f5acb226a9054066d23cc061d9fe8\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+122
+123        <meta-data
+123-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\91877\.gradle\caches\8.10\transforms\d934a914ac5c11a8e99c67c45b44c48d\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+124            android:name="com.google.android.gms.version"
+124-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\91877\.gradle\caches\8.10\transforms\d934a914ac5c11a8e99c67c45b44c48d\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+125            android:value="@integer/google_play_services_version" />
+125-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\91877\.gradle\caches\8.10\transforms\d934a914ac5c11a8e99c67c45b44c48d\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+126
+127        <uses-library
+127-->[androidx.window:window:1.0.0] C:\Users\91877\.gradle\caches\8.10\transforms\756c00c807c2083e162c2fdde894d9a7\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+128            android:name="androidx.window.extensions"
+128-->[androidx.window:window:1.0.0] C:\Users\91877\.gradle\caches\8.10\transforms\756c00c807c2083e162c2fdde894d9a7\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+129            android:required="false" />
+129-->[androidx.window:window:1.0.0] C:\Users\91877\.gradle\caches\8.10\transforms\756c00c807c2083e162c2fdde894d9a7\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+130        <uses-library
+130-->[androidx.window:window:1.0.0] C:\Users\91877\.gradle\caches\8.10\transforms\756c00c807c2083e162c2fdde894d9a7\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+131            android:name="androidx.window.sidecar"
+131-->[androidx.window:window:1.0.0] C:\Users\91877\.gradle\caches\8.10\transforms\756c00c807c2083e162c2fdde894d9a7\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+132            android:required="false" />
+132-->[androidx.window:window:1.0.0] C:\Users\91877\.gradle\caches\8.10\transforms\756c00c807c2083e162c2fdde894d9a7\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+133
+134        <service
+134-->[androidx.room:room-runtime:2.6.1] C:\Users\91877\.gradle\caches\8.10\transforms\39884f2a72cd28f00f81c95eca4bd395\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+135            android:name="androidx.room.MultiInstanceInvalidationService"
+135-->[androidx.room:room-runtime:2.6.1] C:\Users\91877\.gradle\caches\8.10\transforms\39884f2a72cd28f00f81c95eca4bd395\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+136            android:directBootAware="true"
+136-->[androidx.room:room-runtime:2.6.1] C:\Users\91877\.gradle\caches\8.10\transforms\39884f2a72cd28f00f81c95eca4bd395\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+137            android:exported="false" />
+137-->[androidx.room:room-runtime:2.6.1] C:\Users\91877\.gradle\caches\8.10\transforms\39884f2a72cd28f00f81c95eca4bd395\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+138
+139        <receiver
+139-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+140            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+140-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+141            android:directBootAware="false"
+141-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+142            android:enabled="true"
+142-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+143            android:exported="true"
+143-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+144            android:permission="android.permission.DUMP" >
+144-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+145            <intent-filter>
+145-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+146                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+146-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+146-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+147            </intent-filter>
+148            <intent-filter>
+148-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+149                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+149-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+149-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+150            </intent-filter>
+151            <intent-filter>
+151-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+152                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+152-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+152-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+153            </intent-filter>
+154            <intent-filter>
+154-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+155                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+155-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+155-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\91877\.gradle\caches\8.10\transforms\2b6fe586df08c517ec97669bf16bfd1c\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+156            </intent-filter>
+157        </receiver>
+158    </application>
+159
+160</manifest>

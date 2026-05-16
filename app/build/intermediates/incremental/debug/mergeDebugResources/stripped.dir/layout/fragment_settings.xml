@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Algorithm Settings"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adjust parameters to simulate different sensor error conditions"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            android:paddingBottom="16dp" />
+
+        <!-- PDR Settings -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PDR Settings"
+            android:textColor="#FF9800"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingVertical="8dp" />
+
+        <TextView
+            android:id="@+id/tv_step_length_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:text="Step Length Error: ±5cm" />
+
+        <SeekBar
+            android:id="@+id/sb_step_length_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="30"
+            android:progress="5"
+            android:paddingBottom="12dp" />
+
+        <TextView
+            android:id="@+id/tv_heading_noise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:text="Heading Noise: ±5°" />
+
+        <SeekBar
+            android:id="@+id/sb_heading_noise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="45"
+            android:progress="5"
+            android:paddingBottom="12dp" />
+
+        <!-- GNSS Settings -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GNSS Settings"
+            android:textColor="#2196F3"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingVertical="8dp" />
+
+        <TextView
+            android:id="@+id/tv_gnss_noise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:text="GNSS Noise Multiplier: ±5m" />
+
+        <SeekBar
+            android:id="@+id/sb_gnss_noise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="50"
+            android:progress="5"
+            android:paddingBottom="12dp" />
+
+        <!-- Adaptive FGO Window Settings -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adaptive FGO Window Settings"
+            android:textColor="#4CAF50"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingVertical="8dp" />
+
+        <TextView
+            android:id="@+id/tv_min_window"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:text="Min Window Size: 5" />
+
+        <SeekBar
+            android:id="@+id/sb_min_window"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="20"
+            android:progress="5"
+            android:paddingBottom="12dp" />
+
+        <TextView
+            android:id="@+id/tv_max_window"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:text="Max Window Size: 30" />
+
+        <SeekBar
+            android:id="@+id/sb_max_window"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="50"
+            android:progress="30"
+            android:paddingBottom="12dp" />
+
+        <TextView
+            android:id="@+id/tv_adaptive_sens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:text="Adaptive Sensitivity: 1.00x" />
+
+        <SeekBar
+            android:id="@+id/sb_adaptive_sens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="50"
+            android:paddingBottom="16dp" />
+
+        <!-- Action Buttons -->
+        <Button
+            android:id="@+id/btn_apply_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apply Settings"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_reset_defaults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset to Defaults"
+            android:backgroundTint="#607D8B"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_reset_trajectory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset All Trajectories"
+            android:backgroundTint="#F44336"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="32dp" />
+
+    </LinearLayout>
+
+</ScrollView>

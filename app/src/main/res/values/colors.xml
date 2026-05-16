@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1565C0</color>
+    <color name="colorPrimaryDark">#0D47A1</color>
+    <color name="colorAccent">#00E676</color>
+    <color name="colorBackground">#121212</color>
+    <color name="colorSurface">#1E1E2E</color>
+
+    <!-- Algorithm colors -->
+    <color name="color_gnss">#2196F3</color>
+    <color name="color_pdr">#FF9800</color>
+    <color name="color_kalman">#9C27B0</color>
+    <color name="color_batch_fgo">#F44336</color>
+    <color name="color_fixed_lag">#00BCD4</color>
+    <color name="color_adaptive_fgo">#4CAF50</color>
+</resources>

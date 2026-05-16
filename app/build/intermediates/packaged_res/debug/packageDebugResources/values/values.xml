@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#00E676</color>
+    <color name="colorBackground">#121212</color>
+    <color name="colorPrimary">#1565C0</color>
+    <color name="colorPrimaryDark">#0D47A1</color>
+    <color name="colorSurface">#1E1E2E</color>
+    <color name="color_adaptive_fgo">#4CAF50</color>
+    <color name="color_batch_fgo">#F44336</color>
+    <color name="color_fixed_lag">#00BCD4</color>
+    <color name="color_gnss">#2196F3</color>
+    <color name="color_kalman">#9C27B0</color>
+    <color name="color_pdr">#FF9800</color>
+    <string name="app_name">AdaptiveFGO Navigator</string>
+    <string name="channel_name">Localization Service</string>
+    <string name="notification_text">Background localization running</string>
+    <string name="notification_title">AdaptiveFGO Active</string>
+    <style name="Theme.AdaptiveFGO" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/colorAccent</item>
+        <item name="colorSecondaryVariant">@color/colorAccent</item>
+        <item name="colorOnSecondary">@android:color/black</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+    </style>
+</resources>

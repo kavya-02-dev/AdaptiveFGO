@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Error Analysis Dashboard"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingBottom="12dp" />
+
+        <!-- RMSE Bar Chart -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Position Error Comparison (relative to GNSS baseline)"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp"
+            android:paddingBottom="4dp" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/bar_chart_rmse"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#1E1E2E" />
+
+        <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+        <!-- Error Over Time Line Chart -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Position Error vs Time"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp"
+            android:paddingBottom="4dp" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/line_chart_error"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#1E1E2E" />
+
+        <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+        <!-- Comparison Table -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Algorithm Comparison Table"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tv_comparison_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1E1E2E"
+            android:textColor="#00FF88"
+            android:textSize="11sp"
+            android:fontFamily="monospace"
+            android:padding="12dp"
+            android:text="Collecting data for analysis..." />
+
+        <View android:layout_width="match_parent" android:layout_height="80dp" />
+
+    </LinearLayout>
+
+</ScrollView>

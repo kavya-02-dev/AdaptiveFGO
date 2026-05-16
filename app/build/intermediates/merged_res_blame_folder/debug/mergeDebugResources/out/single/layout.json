@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.adaptivefgo.navigator.app-mergeDebugResources-54:/layout/activity_permissions.xml",
+        "source": "com.adaptivefgo.navigator.app-main-57:/layout/activity_permissions.xml"
+    },
+    {
+        "merged": "com.adaptivefgo.navigator.app-mergeDebugResources-54:/layout/fragment_error_analysis.xml",
+        "source": "com.adaptivefgo.navigator.app-main-57:/layout/fragment_error_analysis.xml"
+    },
+    {
+        "merged": "com.adaptivefgo.navigator.app-mergeDebugResources-54:/layout/fragment_navigation.xml",
+        "source": "com.adaptivefgo.navigator.app-main-57:/layout/fragment_navigation.xml"
+    },
+    {
+        "merged": "com.adaptivefgo.navigator.app-mergeDebugResources-54:/layout/fragment_map_batch.xml",
+        "source": "com.adaptivefgo.navigator.app-main-57:/layout/fragment_map_batch.xml"
+    },
+    {
+        "merged": "com.adaptivefgo.navigator.app-mergeDebugResources-54:/layout/fragment_settings.xml",
+        "source": "com.adaptivefgo.navigator.app-main-57:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "com.adaptivefgo.navigator.app-mergeDebugResources-54:/layout/activity_main.xml",
+        "source": "com.adaptivefgo.navigator.app-main-57:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.adaptivefgo.navigator.app-mergeDebugResources-54:/layout/fragment_comparison_map.xml",
+        "source": "com.adaptivefgo.navigator.app-main-57:/layout/fragment_comparison_map.xml"
+    },
+    {
+        "merged": "com.adaptivefgo.navigator.app-mergeDebugResources-54:/layout/fragment_map_single.xml",
+        "source": "com.adaptivefgo.navigator.app-main-57:/layout/fragment_map_single.xml"
+    },
+    {
+        "merged": "com.adaptivefgo.navigator.app-mergeDebugResources-54:/layout/fragment_adaptive_fgo.xml",
+        "source": "com.adaptivefgo.navigator.app-main-57:/layout/fragment_adaptive_fgo.xml"
+    }
+]

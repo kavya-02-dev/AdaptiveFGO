@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="#121212">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AdaptiveFGO Navigator"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Requires location permission for GPS+PDR localization research"
+        android:textColor="#AAAAAA"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingBottom="32dp" />
+
+    <TextView
+        android:id="@+id/tv_permission_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF9800"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:paddingBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_grant_permissions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Grant Location Permission"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btn_open_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open App Settings"
+        android:backgroundTint="#607D8B"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
