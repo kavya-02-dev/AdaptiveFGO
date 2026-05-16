@@ -1,222 +1,278 @@
-# AdaptiveFGO Navigator
+# 📍 Adaptive Fusion Navigation
 
-**Real-Time GNSS–PDR Fusion and Adaptive Factor Graph Optimization Platform**
+Adaptive Fusion Navigation is a real-time pedestrian navigation system designed to improve positioning accuracy in challenging indoor and outdoor environments. The project combines **GNSS**, **Pedestrian Dead Reckoning (PDR)**, and **Adaptive Factor Graph Optimization (FGO)** to provide reliable localization even during signal interruptions and urban obstructions.
 
-A full Android research application implementing 6 localization algorithms with a centralized sensor pipeline, real-time visualization, and GCP cloud batch optimization.
+Unlike traditional navigation systems that rely heavily on GPS alone, this project dynamically adapts its optimization strategy based on:
+
+* GNSS signal quality
+* pedestrian motion stability
+* sensor confidence
+
+The result is a navigation system that remains accurate, stable, and computationally efficient even in difficult environments such as indoor corridors, staircases, and urban canyons.
+
+This project was developed as part of research focused on adaptive optimization techniques for smartphone-based pedestrian navigation. 
 
 ---
 
-## Architecture
+# ✨ Key Features
 
-```
+* Real-time pedestrian navigation
+* GNSS + PDR sensor fusion
+* Adaptive Sliding Window Factor Graph Optimization
+* Indoor–outdoor seamless tracking
+* Dynamic optimization window selection
+* Google Maps integration
+* Cloud-assisted batch optimization using Google Cloud Run
+* Multi-layer trajectory visualization
+* Real-time navigation statistics
+* Motion variance analysis
+* Error comparison dashboard
+* Route optimization and smoothing
+* CSV export support
+
+---
+
+# 🧠 Core Research Contribution
+
+The main contribution of this project is the implementation of an **Adaptive Sliding Window Factor Graph Optimization** framework.
+
+Instead of using a fixed optimization window, the system dynamically adjusts the window size using:
+
+* GNSS quality score
+* PDR stability score
+* heading certainty
+* motion variance
+
+### Adaptive Strategy
+
+| Environment                 | Window Size          | Behavior                 |
+| --------------------------- | -------------------- | ------------------------ |
+| Strong GNSS + Stable Motion | Small Window (5–8)   | Faster and efficient     |
+| Weak GNSS + Unstable Motion | Large Window (20–30) | More robust and accurate |
+
+This approach achieves:
+
+* higher accuracy than Kalman Filters
+* lower latency than Batch FGO
+* better adaptability than Fixed-Lag FGO
+
+
+
+---
+
+# 🏗 System Architecture
+
+```text id="jz9u2l"
 Smartphone Sensors
-  │ GPS / Accelerometer / Gyroscope / Magnetometer
-  ▼
-LocalizationService (Kotlin Foreground Service)
-  │  Central sensor pipeline — collects once, distributes to all
-  ├──▶ GnssProcessor         → GNSS raw trajectory
-  ├──▶ PdrProcessor          → Pedestrian Dead Reckoning
-  ├──▶ KalmanFilterProcessor → EKF GNSS+PDR fusion
-  ├──▶ FixedLagFgoProcessor  → Sliding window FGO
-  ├──▶ AdaptiveFgoProcessor  → Adaptive window FGO ⭐
-  └──▶ CloudSyncModule       → GCP Cloud Run → Batch FGO
-          │
-          ▼
-    TrajectoryRepository (StateFlow)
-          │
-          ▼
-    MainActivity (ViewPager2 — 11 pages)
-    All pages read from repository instantly — no recomputation on swipe
+│ GPS / Accelerometer / Gyroscope / Magnetometer
+▼
+LocalizationService (Foreground Service)
+│
+├── GnssProcessor
+├── PdrProcessor
+├── KalmanFilterProcessor
+├── FixedLagFgoProcessor
+├── AdaptiveFgoProcessor
+└── CloudSyncModule → GCP Cloud Run → Batch FGO
+```
+
+All sensor data is collected centrally and distributed to multiple localization algorithms in real time. This architecture avoids recomputation and allows efficient comparison between different fusion approaches. 
+
+---
+
+# 🛠 Technology Stack
+
+### Mobile Development
+
+* Kotlin
+* Android SDK
+* Android Sensor APIs
+* Google Maps SDK
+* Material Design 3
+
+### Backend & Cloud
+
+* Google Cloud Platform (GCP)
+* Google Cloud Run
+* Flask
+* REST APIs
+* Retrofit
+* OkHttp
+
+### Navigation & Optimization
+
+* Factor Graph Optimization (FGO)
+* GNSS/PDR Fusion
+* Extended Kalman Filter (EKF)
+* GraphHopper Routing
+
+### Storage & Visualization
+
+* Room Database
+* MPAndroidChart
+* StateFlow
+* Gson
+
+
+
+---
+
+# 📱 Application Pages
+
+The Android application contains 11 interactive pages for visualization, experimentation, and algorithm comparison.
+
+| Page | Module         | Purpose                     |
+| ---- | -------------- | --------------------------- |
+| 1    | GNSS           | Raw GPS trajectory          |
+| 2    | PDR            | Drift visualization         |
+| 3    | Kalman Filter  | EKF-based fusion            |
+| 4    | Batch FGO      | Cloud-based optimization    |
+| 5    | Fixed-Lag FGO  | Sliding window optimization |
+| 6    | Adaptive FGO   | Proposed adaptive algorithm |
+| 7    | Compare        | Overlay comparison          |
+| 8    | Error Analysis | RMSE and accuracy metrics   |
+| 9    | Live Tracking  | Real-time localization      |
+| 10   | Navigation     | Route guidance              |
+| 11   | Settings       | Experiment controls         |
+
+
+
+---
+
+# 📊 Experimental Results
+
+The system was evaluated on mixed indoor–outdoor pedestrian routes containing:
+
+* open-sky regions
+* urban obstruction areas
+* indoor corridors
+* staircase environments
+* GNSS outage zones
+
+### Positioning Accuracy
+
+| Method                  | RMSE   |
+| ----------------------- | ------ |
+| Raw GNSS                | 4.82 m |
+| Kalman Filter           | 2.86 m |
+| Fixed Window FGO        | 2.31 m |
+| Adaptive FGO (Proposed) | 1.47 m |
+
+The proposed Adaptive FGO achieved:
+
+* smoother trajectories
+* lower positioning error
+* improved indoor stability
+* real-time execution with low latency
+
+
+
+---
+
+# ⚙ Sensor Pipeline
+
+All localization algorithms receive the same centralized sensor snapshot containing:
+
+* GNSS data
+* IMU readings
+* heading estimation
+* step detection
+* motion variance
+* uncertainty metrics
+
+Processing Rates:
+
+* Sensors → 50 Hz
+* Algorithms → 10 Hz
+
+This enables fair real-time comparison between localization approaches. 
+
+---
+
+# ☁ Cloud Integration
+
+The project integrates Google Cloud Run for batch optimization.
+
+### Cloud Features
+
+* scalable serverless deployment
+* asynchronous optimization
+* trajectory refinement
+* cloud-assisted validation
+
+The system automatically syncs optimized trajectories without blocking real-time mobile execution. 
+
+---
+
+# 📂 Project Structure
+
+```text id="4xf26h"
+app/                    Android application
+cloud-run-python/       Cloud optimization backend
+screenshots/            Application screenshots
+datasets/               Navigation datasets
 ```
 
 ---
 
-## Setup
+# 🚀 Setup Instructions
 
-### 1. Clone & Open in Android Studio
+### Clone Repository
 
-```bash
-git clone <repo>
-# Open AdaptiveFGO/ in Android Studio Arctic Fox or newer
+```bash id="v4ax5z"
+git clone https://github.com/yourusername/adaptive-fusion-navigation.git
 ```
 
-### 2. Configure API Keys
+---
 
-Copy `local.properties.template` to `local.properties` and fill in:
+### Configure API Keys
 
-```properties
-sdk.dir=/path/to/your/Android/sdk
+Create a `local.properties` file:
+
+```properties id="jlwm6w"
 MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY
-GCP_BATCH_FGO_URL=YOUR_CLOUD_RUN_URL
-```
-
-**Get Google Maps API Key:**
-1. Go to https://console.cloud.google.com
-2. Enable "Maps SDK for Android"
-3. Create credentials → API Key
-4. Restrict to your app package: `com.adaptivefgo.navigator`
-
-### 3. Deploy GCP Cloud Run (Optional — for Page 4 Batch FGO)
-
-```bash
-cd cloud-run-python/
-
-# Install Google Cloud CLI if needed
-# https://cloud.google.com/sdk/docs/install
-
-gcloud auth login
-gcloud config set project YOUR_PROJECT_ID
-
-# Deploy (free tier: 2M requests/month, 360K CPU-seconds)
-gcloud run deploy adaptivefgo-batch \
-  --source . \
-  --platform managed \
-  --region us-central1 \
-  --allow-unauthenticated \
-  --memory 512Mi
-
-# Copy the Service URL to local.properties GCP_BATCH_FGO_URL
-```
-
-If you skip GCP deployment, Page 4 (Batch FGO) will use an on-device fallback.
-
-### 4. Build & Run
-
-- Connect Android device (API 26+) or start emulator
-- Run `▶ app` in Android Studio
-- Grant location permissions when prompted
-- Tap ▶ FAB to start the localization service
-
----
-
-## Pages
-
-| Page | Algorithm | Key Feature |
-|------|-----------|-------------|
-| 1 GNSS | Raw GPS | Baseline: shows noise & multipath |
-| 2 PDR | Inertial only | Cumulative drift visible |
-| 3 Kalman | EKF fusion | Improved stability |
-| 4 Batch FGO | GCP Cloud Run | Full graph optimization |
-| 5 Fixed-Lag FGO | Sliding window | Real-time feasible |
-| 6 ★ Adaptive FGO | **Novel method** | Dynamic window adaptation |
-| 7 Compare | All 6 overlaid | Visual superiority of Adaptive FGO |
-| 8 Error | RMSE/Mean/Max | Quantitative validation |
-| 9 Live | Real-time markers | GNSS vs PDR vs Adaptive FGO |
-| 10 Navigate | Navigation mode | Long-press map to set destination |
-| 11 Settings | Experiment | Adjust error parameters |
-
----
-
-## Core Research Contribution (Page 6)
-
-**Adaptive FGO** dynamically adjusts the optimization window size using:
-
-```
-GNSS Quality Score  = f(CN0, accuracy, satellite count)
-PDR Stability Score = f(accelerometer variance, step regularity)
-Heading Certainty   = f(magnetometer quality, gyro agreement)
-
-Window Size = MIN + (1 - Combined Quality) × (MAX - MIN) × Sensitivity
-
-Strong GNSS + Stable PDR  →  Small window (5-8)   — fast, efficient
-Weak GNSS + Unstable PDR  →  Large window (20-30)  — robust, accurate
-```
-
-This achieves:
-- Higher accuracy than Kalman Filter
-- Lower latency than Batch FGO
-- More accurate than Fixed-Lag FGO in dynamic conditions
-
----
-
-## Sensor Pipeline
-
-All sensors collected **once** centrally in `LocalizationService` and distributed to all algorithms. Each algorithm receives an identical `SensorSnapshot` object:
-
-```kotlin
-data class SensorSnapshot(
-    val gnss: GnssData,           // latitude, longitude, accuracy, CN0, sats
-    val imu: ImuData,             // accel, gyro, magnetometer
-    val heading: Double,          // computed from accel+mag
-    val stepDetected: Boolean,    // from TYPE_STEP_DETECTOR
-    val stepLength: Double,       // Weinberg model estimate
-    val motionVariance: Double,   // from accelerometer buffer
-    val headingUncertainty: Double
-)
-```
-
-Processing rate: **10 Hz** (algorithms) | **50 Hz** (sensors)
-
----
-
-## Technology Stack
-
-| Layer | Technology |
-|-------|------------|
-| UI | Kotlin, Android ViewPager2, Material3 |
-| Sensors | GPS, Accelerometer, Gyroscope, Magnetometer |
-| Maps | Google Maps SDK for Android |
-| Background | Android Foreground Service |
-| Architecture | Repository Pattern + StateFlow |
-| Charts | MPAndroidChart |
-| Cloud | GCP Cloud Run (Python, Flask, scipy) |
-| HTTP | OkHttp + Retrofit |
-
----
-
-## GCP Free Tier Usage
-
-- **Cloud Run**: 2M requests/month free
-- **Minimum instances**: 0 (scales to zero when not used)
-- The app syncs every **30 seconds** with minimum **10 factors** accumulated
-- Typical session: ~2 Cloud Run invocations/minute ≈ well within free tier
-
----
-
-## Permissions Required
-
-```
-ACCESS_FINE_LOCATION      — GPS positioning
-ACCESS_COARSE_LOCATION    — Network fallback
-FOREGROUND_SERVICE        — Background processing
-HIGH_SAMPLING_RATE_SENSORS — Fast IMU (>200Hz)
-INTERNET                  — GCP sync
+GCP_BATCH_FGO_URL=YOUR_CLOUD_RUN_ENDPOINT
 ```
 
 ---
 
-## File Structure
+### Build Project
 
+```bash id="6br1be"
+./gradlew build
 ```
-AdaptiveFGO/
-├── app/src/main/java/com/adaptivefgo/navigator/
-│   ├── algorithms/
-│   │   ├── GnssProcessor.kt
-│   │   ├── PdrProcessor.kt           (Weinberg step length model)
-│   │   ├── KalmanFilterProcessor.kt  (4-state EKF)
-│   │   ├── FixedLagFgoProcessor.kt   (Gauss-Newton, window=10)
-│   │   └── AdaptiveFgoProcessor.kt   ⭐ Core research
-│   ├── cloud/
-│   │   └── CloudSyncModule.kt        (GCP sync)
-│   ├── data/
-│   │   └── Models.kt                 (all data classes)
-│   ├── repository/
-│   │   └── TrajectoryRepository.kt   (central state store)
-│   ├── service/
-│   │   └── LocalizationService.kt    (foreground service)
-│   ├── ui/
-│   │   ├── BaseMapFragment.kt
-│   │   ├── gnss/, pdr/, kalman/, batchfgo/, fixedlagfgo/
-│   │   ├── adaptivefgo/              ⭐ Main research page
-│   │   ├── comparison/
-│   │   ├── error/
-│   │   ├── tracking/
-│   │   ├── navigation/
-│   │   └── settings/
-│   └── MainActivity.kt               (ViewPager2, 11 pages)
-├── cloud-run-python/
-│   ├── main.py                       (Flask + scipy L-BFGS-B optimization)
-│   ├── requirements.txt
-│   └── Dockerfile
-└── local.properties.template         ← copy to local.properties
-```
+
+Run the project using Android Studio or install the APK directly on an Android device.
+
+---
+
+# 🔮 Future Improvements
+
+Planned enhancements include:
+
+* incremental graph optimization using iSAM
+* multi-device evaluation
+* tightly coupled GNSS integration
+* visual-inertial fusion
+* power optimization
+* AI-assisted motion prediction
+
+
+
+---
+
+# 📖 Research Basis
+
+This project is based on the research work:
+
+**Adaptive Window Factor Graph Optimization for PDR-GNSS Fusion in Real-Time Pedestrian Navigation** 
+
+---
+
+# 📄 License
+
+This project is intended for:
+
+* academic research
+* educational purposes
+* experimental navigation systems
