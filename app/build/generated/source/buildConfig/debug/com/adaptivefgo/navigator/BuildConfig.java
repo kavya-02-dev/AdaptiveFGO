@@ -12,5 +12,5 @@ public final class BuildConfig {
   // Field from default config.
   public static final String GCP_BATCH_FGO_URL = "https://adaptivefgo-batch-63698321240.asia-south1.run.app/optimize";
   // Field from default config.
-  public static final String MAPS_API_KEY = "AIzaSyC6SC0Dg1wdPMiXBufMHJi_Qg6C03SClUs";
+  public static final String MAPS_API_KEY = "AIzaSyDa9zu81Wy58QLXeNtrVYWWO_IM3vDKYl4";
 }
